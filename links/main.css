@@ -1,0 +1,73 @@
+:root {
+  --background: #29272b;
+  --f_inv: #43423E;
+  --b_high: #E8E9E2;
+  --b_med: #C2C1BB;
+  --b_low: #4B4B49;
+  --b_inv: #0C0B0;
+  --rounded: 2px;
+}
+* { margin:0; padding:0; border:0; outline:0; border-spacing:0; text-decoration:none; font-weight:inherit; font-style:inherit; color:inherit; font-size:100%; font-family:inherit; vertical-align:baseline; list-style:none; border-collapse:collapse; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale }
+*:focus { outline: none}
+body { background:var(--background); color:white; padding:16px; overflow-x: hidden; transition: opacity 150ms; opacity: 1 !important; font-family: var(--mono); font-size: 12px }
+h1 { font-size: 32px; font-weight: bold; text-transform: uppercase; border-bottom: 2px solid var(--b_med); margin-bottom: 8px; }
+h2 { font-size: 24px; font-weight: bold; text-transform: uppercase; }
+h3 { font-size: 16px; font-weight: bold; text-transform: uppercase; }
+p { margin-bottom: 10px; line-height: 2; }
+b { font-weight:bold }
+i { font-style:italic }
+a { cursor: pointer }
+ul { display: block }
+ul li { display: block }
+hr { clear:both }
+code { display: block; white-space: pre }
+svg { stroke-width: 10; stroke: white; stroke-linecap: round }
+small { font-size: 80%; }
+
+#logbook section { padding: 8px; margin-bottom: 32px; }
+#logbook section section { padding: 0; margin: 0; }
+#logbook #stats { display: flex; justify-content: space-between; align-items: baseline; }
+#logbook #overview #total #bars { display: flex; width:100%; }
+#logbook #overview section { margin-top: 16px; }
+#logbook #overview .bar { margin-right: 4px; }
+#logbook #overview .bar:last-child { margin:0; }
+#logbook #overview .bar svg { height: 8px; border-radius: var(--rounded) }
+#logbook #legend { display: flex; justify-content: flex-start; }
+#logbook #legend .item { display: flex; align-items: stretch; margin-right: 16px; }
+#logbook #legend .box { width: 8px; height: 8px; margin-right: 4px; }
+#logbook #legend .box svg { border-radius: var(--rounded); }
+#logbook #legend .cat { text-transform: uppercase; }
+#logbook #balance header { margin-bottom: 8px; }
+#logbook #balance #bars { display:flex; height: 128px; }
+#logbook #balance #bars a { display: flex; flex-direction: column; justify-content: flex-end; margin-right: 2px; background-color: var(--b_low); border-radius: var(--rounded); box-sizing: border-box; }
+#logbook #balance #bars a:hover { background-color: white; }
+#logbook #balance #bars a:hover  { opacity: 0.5; }
+#logbook #balance #bars a svg:first-child { border-radius: var(--rounded) var(--rounded) 0px 0px; }
+#logbook #balance #bars a svg:last-child { border-radius:  0px 0px var(--rounded) var(--rounded); }
+#logbook #balance section { margin-top: 16px; }
+#logbook #balance section>section { margin: 0; }
+#logbook #balance #past figure:last-child { margin: 0; }
+#logbook #balance footer { margin-top: 4px; border-top: 2px solid var(--b_low); display: flex; justify-content: space-between; color: var(--b_med); }
+
+#logbook #projects #categories { display: flex; }
+#logbook #projects #categories section { width: 100%; margin-right: 32px; }
+#logbook #projects #categories section:last-child { margin-right: 0; }
+#logbook #projects #categories figure {  margin: 8px 0px 4px 0px; padding-bottom: 8px; border-bottom: 1px solid var(--b_low); }
+
+#logbook #graph { height: 128px; position: relative; background-color: var(--b_low); border-radius: var(--rounded); margin-bottom: 4px; }
+#logbook #graph svg { position: absolute; top: 0; left: 0; }
+#logbook #graph #bars { display: flex; }
+#logbook #graph #bars a { height: 128px; margin-right: 2px; z-index: 1; }
+#logbook #graph #bars a:last-child { margin: 0; border: 0; }
+#logbook #graph #bars a:hover { border-right: 3px solid var(--b_high); background-color: rgba(255,255,255,0.1); }
+
+#logbook #datepicker { display: flex; }
+#logbook #datepicker form { font-size: 16px; font-weight: bold; font-family:inherit; }
+#logbook #datepicker form select { color: var(--b_high); background-color: var(--background); width: 100%; box-sizing: border-box;  border-radius: 0; -moz-appearance: none; -webkit-appearance: none; appearance: none; }
+#logbook #datepicker form select:hover { background-color: var(--b_low); }
+
+.empty { fill: var(--b_low); stroke: var(--b_low); color: var(--b_low); }
+.stroke { stroke-width: 2px; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+.lc { text-transform: lowercase; }
+.rounded { border-radius: var(--rounded); }
+.small { font-size: 80%; }

@@ -1,0 +1,23 @@
+DATABASE.chronicle = `
+FROM     TO       CAT DESCRIPTION
+2018 APR 2019 SEP PRO Project 5
+2018 APR 2019 JAN FAM Event 2
+2018 MAY ---- --- TRA Place 6
+2017 AUG ---- --- TRA Place 5
+2017 JUL ---- --- TRA Place 4
+2016 FEB ---- --- FAM Event 1
+2015 NOV 2017 MAY PRO Project 4
+2015 AUG ---- --- TRA Place 3
+2015 APR 2015 SEP PRO Project 3
+2015 MAR 2015 APR PRO Project 2
+2015 JAN 2015 MAR PRO Project 1
+2014 APR ---- --- TRA Place 2
+2015 APR *--- --- MOV City 3
+2016 MAY *--- --- WRK Company 2
+2016 OCT 2019 NOV REL Person 2
+2014 NOV 2015 APR MOV City 2
+2012 APR ---- --- TRA Place 1
+2010 MAY 2014 --- WRK Company 1
+2005 OCT 2008 NOV REL Person 1
+2000 JUN 2014 NOV MOV City 1
+`
