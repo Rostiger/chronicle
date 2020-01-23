@@ -84,8 +84,7 @@ function Interface () {
       const segs = document.createElement('div')
       segs.id = 'segments'
       segs.innerHTML = segments.innerHTML
-      container.appendChild(segs)
-      
+      container.appendChild(segs)      
       timelineContainer.appendChild(container)
 
       // add items
@@ -97,8 +96,23 @@ function Interface () {
         const date = new Date(item.from.year, item.from.month)
         const y = Math.round((new Date() - date)/3600000/24/365 * 12 * monthHeight) - h
         const css = `height: ${h - 4}px; top: ${y + 4}px; background-color:${cat.COLOR};`
-        container.innerHTML += `<div class="item" style="${css}" title="${item.description}"></div>`
+        const el = document.createElement('div')
+        el.className = 'item'
+        el.style = css
+        el.title = item.description
+        container.appendChild(el)
+
       }
+      container.addEventListener("mouseover", function( event ) {
+        const e = event.target
+        if (e.className === 'item') e.style.background = 'white'
+      })
+
+      container.addEventListener("mouseout", function( event ) {
+        const e = event.target
+        if (e.className === 'item') e.style.background = cat.COLOR
+      })  
+
       // add footer
       const firstEntry = new Date (database.stats.firstEntry.year, database.stats.firstEntry.month)
       const timelineStart = new Date (database.stats.timelineStart.year, database.stats.timelineStart.month)
