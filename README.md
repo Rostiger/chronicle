@@ -1,8 +1,12 @@
 # Chronicle
 Chronicle is a simple text-based timeline visualisation tool I created in an effort to better understand and know myself.
-It creates multiple timeline timeline UI from text based data using [neauoire](https://github.com/neauoire)'s _Tablatal_ and  _Indental_ formats and parsers.
+
+It was born from the realization of my difficulty to put events and phases of my past into context.
+Chronicle is an attempt to collect, store and visualize this information in a single place and make it easily accessible.
 
 <img src="https://raw.githubusercontent.com/Rostiger/chronicle/master/chronicle.gif" />
+
+Chronicle creates multiple timeline timeline UI from text based data using [neauoire](https://github.com/neauoire)'s _Tablatal_ and  _Indental_ formats and parsers.
 
 Each lane represents one of the categories in the databox on the right. The black bar at the top displays the current year and month. Chronicle supports singular, continuous and ongoing events.
 
@@ -10,7 +14,7 @@ Each lane represents one of the categories in the databox on the right. The blac
 The data is stored in `database/chronicle.tbtl` and uses the following format:
 ```
 FROM     TO       CAT DESCRIPTION
-2018 APR 2019 SEP PRO Event Description
+2018 APR 2019 SEP ID  Event Description
 ```
 `CAT` represents a category that must be defined in `database/settings.nbtl`
 ```
