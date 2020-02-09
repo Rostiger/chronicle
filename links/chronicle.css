@@ -38,4 +38,4 @@ small { font-size: 80%; }
 /* #timeline #databox #scrubber { width: 22%; min-width: 108px; margin-left: 42px; border-top: 4px solid var(--background); box-sizing: border-box; z-index: 50; }
  */
 
-#timeline #databox { width:80%; padding: 16px 16px 0px 16px; background-color: var(--b_low); border-radius: 2px; box-sizing: border-box; transition: opacity 100ms ease-in-out; }
+#timeline #databox { width: 80%; position: relative; padding: 16px 16px 0px 16px; background-color: var(--b_low); border-radius: 2px; box-sizing: border-box; transition: top 100ms ease-in-out; }

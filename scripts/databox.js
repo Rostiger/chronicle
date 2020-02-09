@@ -42,5 +42,6 @@ function Databox () {
 	}
   window.addEventListener('scroll', function(e) {
     chronicle.interface.databox.update()
+    if (window.scrollY > 60) this.databox.style = `top:${Math.round(window.scrollY) - 60}px`
   })
 }
